@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+
+        >
+        <TableLayout
+            android:layout_width="match_parent"
+            android:gravity="bottom"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginBottom="30dp"
+            android:layout_height="match_parent">
+            <TableRow>
+                <TextView
+                    android:id="@+id/result_text__view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="5"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:padding="8dp" />
+            </TableRow>
+
+            <TableRow>
+                <Button
+                    android:id="@+id/button__clear"
+                    android:text="@string/Clear"
+                    android:onClick="onClearPressed"
+                    android:background="@drawable/background_with_border"
+                    android:backgroundTint="#adafb1"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_weight="10" />
+
+                <Button
+                    android:id="@+id/button__percent"
+                    android:text="@string/remainder"
+                    android:backgroundTint="#adafb1"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textSize="20sp"
+                    android:onClick="onOperatorPressed"
+                    android:textStyle="bold"
+                    android:background="@drawable/background_with_border"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button__divide"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="0.9"
+                    android:backgroundTint="#FF8700"
+                    android:background="@drawable/background_with_border"
+                    android:text="@string/divide"
+                    android:onClick="onOperatorPressed"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/button__7"
+                    android:text="@string/number7"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:backgroundTint="#333333"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:onClick="onDigitPressed"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/button__8"
+                    android:text="@string/number8"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textSize="20sp"
+                    android:backgroundTint="#333333"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:onClick="onDigitPressed"
+                    android:background="@drawable/background_with_border"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/button__9"
+                    android:text="@string/number9"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:textSize="20sp"
+                    android:onClick="onDigitPressed"
+                    android:backgroundTint="#333333"
+                    android:textColor="@color/white"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button__multiply"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:onClick="onOperatorPressed"
+                    android:textStyle="bold"
+                    android:background="@drawable/background_with_border"
+                    android:backgroundTint="#FF8700"
+                    android:text="@string/multiply"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow>
+                <Button
+                    android:id="@+id/button__4"
+                    android:text="@string/number4"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:textSize="20sp"
+                    android:backgroundTint="#333333"
+                    android:onClick="onDigitPressed"
+                    android:textColor="@color/white"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/button__5"
+                    android:text="@string/number5"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:textSize="20sp"
+                    android:onClick="onDigitPressed"
+                    android:backgroundTint="#333333"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/button__6"
+                    android:text="@string/number6"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:textSize="20sp"
+                    android:onClick="onDigitPressed"
+                    android:backgroundTint="#333333"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/button__subtract"
+                    android:text="@string/subract"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:backgroundTint="#FF8700"
+                    android:onClick="onOperatorPressed"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow>
+                <Button
+                    android:id="@+id/button__1"
+                    android:text="@string/number1"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:textSize="20sp"
+                    android:backgroundTint="#333333"
+                    android:onClick="onDigitPressed"
+                    android:textColor="@color/white"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/button__2"
+                    android:text="@string/number2"
+                    android:backgroundTint="#333333"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:textSize="20sp"
+                    android:onClick="onDigitPressed"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/button__3"
+                    android:text="@string/number3"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:textSize="20sp"
+                    android:onClick="onDigitPressed"
+                    android:backgroundTint="#333333"
+                    android:textColor="@color/white"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/button__add"
+                    android:text="@string/add"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:backgroundTint="#FF8700"
+                    android:textStyle="bold"
+                    android:background="@drawable/background_with_border"
+                    android:textSize="@dimen/_20sdp"
+                    android:onClick="onOperatorPressed"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:id="@+id/button_0"
+                    android:text="@string/number10"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:backgroundTint="#333333"
+                    android:textColor="@color/white"
+                    android:onClick="onDigitPressed"
+                    android:layout_weight="11"
+                    android:textSize="@dimen/_20sdp"
+                    />
+                <Button
+                    android:id="@+id/button_decimal"
+                    android:text="."
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/background_with_border"
+                    android:textSize="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:backgroundTint="#333333"
+                    android:onClick="onDecimalPressed"
+                    android:textColor="@color/white"
+                    android:layout_weight="0.6"/>
+                <Button
+                    android:id="@+id/button_equals"
+                    android:text="="
+                    android:onClick="onEqualPressed"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:backgroundTint="#FF8700"
+                    android:background="@drawable/background_with_border"
+                    android:layout_column="0"
+                    android:layout_weight="0.5"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_20sdp"
+                    /></TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
